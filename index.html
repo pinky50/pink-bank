@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Bank</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id ="login-area">
+        <h1 class="text-center">Welcome to Pink Bank</h1>
+        <div class="submit-area mt-5">
+            
+            <h4>Login</h4>
+            <div class="form-group mb-4">
+                <input type="email" class="form-control"  placeholder="Enter email">
+                </div>
+                <div class="form-group mb-4">
+                <input type="password" class="form-control"  placeholder="Password">
+                </div>
+                <button id ="loginbtn" class="btn btn-success">Enter</button>
+        </div>
+    </div>
+    <div id="transaction-area">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit status">
+                    <h5>Deposit</h5>
+                    <h2>$00</h2>
+                </div> 
+             </div>
+             <div class="col-md-4">
+                <div class="withdraw status">
+                    <h5>Withdraw</h5>
+                    <h2>$00</h2>
+                </div> 
+             </div>
+             <div class="col-md-4">
+                <div class="balance status">
+                    <h5>Balance</h5>
+                    <h2>$00</h2>
+                </div> 
+             </div>
+        </div>
+    </div>
+    <script>
+        
+        const loginBtn = document.getElementById("loginbtn");
+        loginBtn.addEventListener("click",function(){
+            const loginArea = document.getElementById("login-area");
+            loginArea.style.display = "none";
+            const transactionArea = document.getElementById("transaction-area");
+            transactionArea.style.display = "block";
+        })
+
+    </script>
+    
+</body>
+</html>
